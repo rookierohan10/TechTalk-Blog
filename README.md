@@ -1,6 +1,6 @@
 # TechTalk-Blog
 
-This is the repository that maintains the server side files
+This is the repository that maintains the client side files
 - The app has been built with react js as its framework library
 - We have axios library to maintain get post requests from the server
 - For designing the website we have use vanilla CSS
