@@ -16,4 +16,4 @@ To use this app
 
 
 Database Schema for the project
-![Database Schema](image link)
+![Database Schema](https://github.com/rookierohan10/TechTalk-Blog/blob/main/client/Screenshot%202023-12-06%20092310.png)
