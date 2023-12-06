@@ -38,7 +38,7 @@ function CreatePostPage() {
         let words = postData.content.split(" ");
         words = words.slice(0,300);
         postData.content = words.join(" ");
-        axios.post("http://localhost:5000/create-post", postData)
+        axios.post("https://blog-server-5kb2.onrender.com/create-post", postData)
             .then((res) => {
                 if (res.data === "error") {
                     err.innerText = "Something went wrong! Try again!";
@@ -55,7 +55,7 @@ function CreatePostPage() {
     //Get Categories
     useEffect(() => {
         const getCategory = () => {
-            axios.get("http://localhost:5000/get-categories")
+            axios.get("https://blog-server-5kb2.onrender.com/get-categories")
                 .then((res) => {
                     setCat(res.data);
                 });

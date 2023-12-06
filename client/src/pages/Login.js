@@ -26,7 +26,7 @@ export const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         let err = document.getElementById("err");
-        axios.post("http://localhost:5000/log-in", formData)
+        axios.post("https://blog-server-5kb2.onrender.com/log-in", formData)
             .then((res) => {
                 if (res.data === "success") {
                     setCookie("em", formData.email, 5);

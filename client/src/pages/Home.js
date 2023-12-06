@@ -22,7 +22,7 @@ export const Home = () => {
     //Fetch Posts
     useEffect(() => {
         const fetchPosts = () => {
-            axios.get("http://localhost:5000/fetch-posts")
+            axios.get("https://blog-server-5kb2.onrender.com/fetch-posts")
                 .then((res) => {
                     if (res.data === "no_data") setPosts([]);
                     else setPosts(res.data);
@@ -37,7 +37,7 @@ export const Home = () => {
         if (search) {
             err.innerText = "";
             setActive(true);
-            axios.post("http://localhost:5000/search", {search: search})
+            axios.post("https://blog-server-5kb2.onrender.com/search", {search: search})
                 .then((res) => {
                     if (res.data === "no_data") {
                         setRelPosts([]);

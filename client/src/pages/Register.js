@@ -36,7 +36,7 @@ export const Register = () => {
             err.innerText = "Password and confirm password do not match!";
         }
         else {
-            axios.post("http://localhost:5000/sign-up", formData)
+            axios.post("https://blog-server-5kb2.onrender.com/sign-up", formData)
                 .then((res) => {
                     if(res.data === "success") {
                         err.innerText = "Sign up successful!";

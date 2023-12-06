@@ -20,7 +20,7 @@ function EditPostPage() {
 
     //Get Post Details
     useEffect(() => {
-        axios.post("http://localhost:5000/get-post-details", {
+        axios.post("https://blog-server-5kb2.onrender.com/get-post-details", {
             id: post_id
         })
             .then((res) => {
@@ -43,7 +43,7 @@ function EditPostPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:5000/edit-post", postData)
+        axios.post("https://blog-server-5kb2.onrender.com/edit-post", postData)
             .then((res) => {
                 if (res.data === "error") {
                     err.innerText = "Something went wrong!";
@@ -59,7 +59,7 @@ function EditPostPage() {
     //Get Categories
     useEffect(() => {
         const getCategory = () => {
-            axios.get("http://localhost:5000/get-categories")
+            axios.get("https://blog-server-5kb2.onrender.com/get-categories")
                 .then((res) => {
                     setCat(res.data);
                 });

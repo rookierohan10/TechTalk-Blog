@@ -23,7 +23,7 @@ export const Dashboard = () => {
 
     //Fetch Posts
     function fetchPosts() {
-        axios.post("http://localhost:5000/fetch-user-posts", {
+        axios.post("https://blog-server-5kb2.onrender.com/fetch-user-posts", {
             user_id: user.id
         })
             .then((res) => {
@@ -40,7 +40,7 @@ export const Dashboard = () => {
         const fetchData = () => {
             const em = getCookie("em");
             if (!em) nav("/login");
-            axios.post("http://localhost:5000/fetch-user", {
+            axios.post("https://blog-server-5kb2.onrender.com/fetch-user", {
                 em: em
             })
                 .then((res) => {
@@ -58,7 +58,7 @@ export const Dashboard = () => {
     //Fetch Posts
     useEffect(() => {
         const fetchUserData = () => {
-            axios.post("http://localhost:5000/fetch-user-posts", {
+            axios.post("https://blog-server-5kb2.onrender.com/fetch-user-posts", {
                 user_id: user.id
             })
                 .then((res) => {
@@ -89,7 +89,7 @@ export const Dashboard = () => {
 
     //Delete Post
     function delPost() {
-        axios.post("http://localhost:5000/del-post", {
+        axios.post("https://blog-server-5kb2.onrender.com/del-post", {
             id: currId
         })
             .then((res) => {
