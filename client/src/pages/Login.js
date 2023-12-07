@@ -83,7 +83,7 @@ export const Login = () => {
                         <p id="err"></p>
                     </form>
                 </div>
-                <Link to={"/register"}>New to DevEcho?</Link>
+                <Link to={"/register"}>New to TechTalk?</Link>
             </div>
             {/*  Footer  */}
             <Footer/>
